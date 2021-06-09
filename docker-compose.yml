@@ -1,0 +1,22 @@
+version: "3.5"
+
+services:
+  payment_agent:
+    build: .
+    image: payment_agent/anna
+    command: ./commands/${RUN_MODE}.sh
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 5000:${WSGI_PORT}
+    env_file:
+      - ./.env
+
+#  nginx:
+#    build: ./nginx
+#    ports:
+#      - 5000:80
+#    volumes:
+#      - ./nginx:/etc/nginx/conf.d
+#      - ./main/static:./main/static
+

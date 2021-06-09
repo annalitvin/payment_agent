@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form method="{{ method }}" action="{{ url }}">
+        <input name="id" value="{{ id }}"/>
+        <input name="ac_order_id" value="{{ ac_order_id }}"/>
+        <input name="ac_amount" value="{{ ac_amount }}"/>
+        <input name="ac_currency" value="{{ ac_currency }}"/>
+        <input name="ac_account_email" value="{{ ac_account_email }}"/>
+        <input name="ac_sci_name" value="{{ ac_sci_name }}"/>
+        <input name="ac_sub_merchant_url" value="{{ ac_sub_merchant_url }}"/>
+        <input name="ac_sign" value="{{ ac_sign }}"/>
+
+        <input type="submit"/>
+    </form>
+{% endblock %}
+{% block script %}
+
+{% endblock %}

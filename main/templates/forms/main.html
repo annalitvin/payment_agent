@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container d-flex justify-content-center align-items-center">
+    <div class="jumbotron my-auto">
+    <div class="card shadow-lg p-3 mb-5 bg-black rounded border border-secondary">
+    <div class="card-body form-group">
+        {% if message %}
+            <div class="alert alert-info" role="alert">
+                {{ message }}
+            </div>
+        {% endif %}
+        {% from "forms/_helpers.html" import render_field %}
+        <form method=post id="payform">
+            {{ form.csrf_token }}
+            {{ render_field(form.amount) }}
+            {{ render_field(form.currency) }}
+            {{ render_field(form.description) }}
+            <div class="col-md-12 text-center">
+                <p><input type="submit" class="btn btn-primary" value="Submit">
+            </div>
+        </form>
+    </div>
+    </div>
+    </div>
+    </div>
+{% endblock %}
+{% block script %}
+
+{% endblock %}

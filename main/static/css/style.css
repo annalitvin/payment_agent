@@ -1,0 +1,10 @@
+
+.jumbotron {
+    background: linear-gradient(#4B79A1, #283E51);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#payform label {
+    color: #111; font-size: 16px; font-family: 'Signika', sans-serif; padding-bottom: 10px; font-weight: 700;
+
+}
