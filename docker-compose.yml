@@ -20,4 +20,6 @@ services:
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - ./main/static:/usr/src/app/main/static
+    depends_on:
+      - backend
 
