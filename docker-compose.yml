@@ -13,7 +13,7 @@ services:
       - ./.env
 
   nginx:
-    build: ./nginx
+    build: nginx:1.18-alpine
     ports:
       - "80:80"
       - "443:443"
