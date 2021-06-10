@@ -1,2 +1,2 @@
 #!/bin/bash
-flask run
+python wsgi.py
