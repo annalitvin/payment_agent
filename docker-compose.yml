@@ -7,6 +7,7 @@ services:
     command: gunicorn -w $NUM_WORKERS wsgi:app -b 0:$WSGI_PORT --log-level $LOG_LEVEL #./commands/${RUN_MODE}.sh
     volumes:
       - .:/usr/src/app
+      - ./main/static:/usr/src/app/main/static
     ports:
       - 5000:${WSGI_PORT}
     env_file:
@@ -19,7 +20,7 @@ services:
       - "443:443"
     volumes:
       - ./nginx:/etc/nginx/conf.d
-      - ./main/static:/usr/src/app/main/static
+      - ./main/static:/usr/src/app/payment_agent
     depends_on:
       - payment_agent
 
