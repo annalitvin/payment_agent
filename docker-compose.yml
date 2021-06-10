@@ -15,7 +15,7 @@ services:
   nginx:
     image: nginx:1.18-alpine
     ports:
-      - "85:85"
+      - "80:80"
       - "443:443"
     volumes:
       - ./nginx:/etc/nginx/conf.d
