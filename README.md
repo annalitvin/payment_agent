@@ -1,12 +1,12 @@
 # Piastrix payment service
 
-###Run
+## Run
 
 ``docker-compose build``
 
 ``docker-compose up -d``
 
-###SSL
+## SSL
 
 In future planed include ssl certificate.
 Now this not work, because amazonaws.com happens to be on 
