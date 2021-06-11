@@ -6,7 +6,7 @@
 
 ``docker-compose up -d``
 
-### SSL
+###SSL
 
 In future planed include ssl certificate.
 Now this not work, because amazonaws.com happens to be on 
@@ -17,5 +17,5 @@ the blacklist Let’s Encrypt uses for high-risk domain names.
 The script generates a dummy certificate. 
 Then, it deletes the dummy certificate once the genuine article has been received.
 
- - nginx config to include ssl located in config/ssl.
+ - nginx config to include ssl located in ``config/ssl``.
 
