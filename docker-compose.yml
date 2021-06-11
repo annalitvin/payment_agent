@@ -14,12 +14,11 @@ services:
 
   nginx:
     image: nginx:1.18-alpine
-    restart: unless-stopped
     ports:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx:/etc/nginx/conf.d
+      - ./nginx/:/etc/nginx/conf.d
       - ./main/static:/usr/src/app/payment_agent
     depends_on:
       - payment_agent
