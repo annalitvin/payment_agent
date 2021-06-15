@@ -4,7 +4,7 @@ services:
   payment_agent:
     build: .
     image: payment_agent/anna
-    command: python wsgi.py
+    command: sh ./commands/${RUN_MODE}.sh
     volumes:
       - .:/usr/src/app
     ports:
